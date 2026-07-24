@@ -3,7 +3,7 @@ import Hero from './Hero';
 import LombaCard from './LombaCard';
 import Showcase3D from './Showcase3D';
 import PanitiaAndDrive from './PanitiaAndDrive';
-import MarqueeBanner from './MarqueeBanner';
+import MarqueeBanner from "./MarqueeBanner.jsx";
 import ScrollReveal from './ScrollReveal';
 import { Search, Flame } from 'lucide-react';
 
