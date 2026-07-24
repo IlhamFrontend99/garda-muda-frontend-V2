@@ -1,0 +1,1 @@
+import React from 'react'; export default function ModalInputJuara({ isOpen, onClose }) { if (!isOpen) return null; return null; }

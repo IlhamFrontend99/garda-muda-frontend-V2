@@ -1,0 +1,1 @@
+import React from 'react'; export default function ModalEditLomba({ isOpen, onClose }) { if (!isOpen) return null; return null; }

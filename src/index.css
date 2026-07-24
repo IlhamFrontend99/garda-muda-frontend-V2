@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+/* SINKRONISASI TAILWIND V4 DENGAN DARK MODE */
+@variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    width: 100%;
+    height: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden;
+  }
+}
+
+/* KEYFRAMES & UTILITY CLASSES */
+@keyframes waveFlag {
+  0%, 100% { transform: translateY(0px) rotate(0deg) skewY(0deg); }
+  25% { transform: translateY(-4px) rotate(-3deg) skewY(-2deg); }
+  50% { transform: translateY(3px) rotate(2deg) skewY(1.5deg); }
+  75% { transform: translateY(-2px) rotate(-1.5deg) skewY(-1deg); }
+}
+
+.animate-waving-flag { 
+  animation: waveFlag 3s ease-in-out infinite; 
+  transform-origin: left center; 
+}
+
+* { -webkit-tap-highlight-color: transparent; }
+.scrollbar-none::-webkit-scrollbar { display: none; }
+.scrollbar-none { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* MEDIA PRINT TIKET / LAPORAN PDF */
+@media print {
+  body * { visibility: hidden !important; }
+  #printable-ticket, #printable-ticket * { visibility: visible !important; }
+  #printable-ticket {
+    position: absolute !important;
+    left: 50% !important;
+    top: 0 !important;
+    transform: translateX(-50%) !important;
+    width: 100% !important;
+    max-width: 420px !important;
+    margin: 0 !important;
+    padding: 24px !important;
+    border: 4px dashed #dc2626 !important;
+    background-color: white !important;
+    box-shadow: none !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  .print\:hidden { display: none !important; }
+}

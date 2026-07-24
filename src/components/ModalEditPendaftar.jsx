@@ -1,0 +1,1 @@
+import React from 'react'; export default function ModalEditPendaftar({ isOpen, onClose }) { if (!isOpen) return null; return null; }
